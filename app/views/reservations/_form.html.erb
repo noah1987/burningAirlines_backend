@@ -11,6 +11,19 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :"User name:" %>
+    <%= form.text_area :user_id %>
+    <%= form.label :"Flight number:" %>
+    <%= form.text_area :flight_id %>
+    <%= form.label :Seat %>
+    <%= form.text_area :seat %>
+    <%= form.label :Airplane %>
+    <%= form.text_area :airplane_id %>
+    <%= form.label :"Reserved:" %>
+    <%= form.text_area :reserved %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

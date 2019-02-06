@@ -11,6 +11,15 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= form.label :"Airplane model:" %>
+    <%= form.text_area :plane_model %>
+    <%= form.label :"Rows:" %>
+    <%= form.text_area :rows %>
+    <%= form.label :"Columns:" %>
+    <%= form.text_area :columns %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

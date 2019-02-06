@@ -5,6 +5,9 @@
 <table>
   <thead>
     <tr>
+      <th>Airplane model</th>
+      <th>Rows</th>
+      <th>Columns</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +15,9 @@
   <tbody>
     <% @airplanes.each do |airplane| %>
       <tr>
+        <td><%=  airplane.plane_model%></td>
+        <td><%= airplane.rows %></td>
+        <td><%= airplane.columns %></td>
         <td><%= link_to 'Show', airplane %></td>
         <td><%= link_to 'Edit', edit_airplane_path(airplane) %></td>
         <td><%= link_to 'Destroy', airplane, method: :delete, data: { confirm: 'Are you sure?' } %></td>
