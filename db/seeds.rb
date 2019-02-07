@@ -5,12 +5,15 @@ User.destroy_all
 ##   User.create!(name: name,
 ##               admin: false)
 ## end
-u1 = User.create!(name: "user__1", admin: false);
-u2 = User.create!(name: "user__2", admin: false);
-u3 = User.create!(name: "user__3", admin: false);
-u4 = User.create!(name: "user__4", admin: false);
-u5 = User.create!(name: "user__5", admin: false);
-u6 = User.create!(name: "user__6", admin: false);
+
+b = binding
+500.times do |i|
+  name = Faker::Name.name
+  b.local_variable_set("u#{i}", User.create!(name: name, admin: false))
+end
+
+# b.local_variable_get('u1')
+
 
 
 # Airplanes
@@ -51,6 +54,15 @@ r6 = Reservation.create!(seat: "27E", reserved: true);
 
 
 # Associations #################################################################
+
+#Flight.all.each do |f|
+#  (1..f.airplane.rows).to_a do |row|
+#     ('A'..f.airplane.columns).to_a do |col|
+
+
+
+
+
 a1.flights << f1
 a2.flights << f2
 a3.flights << f3
